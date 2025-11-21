@@ -1,0 +1,111 @@
+/* _sass/_grid.scss */
+
+/* ------------------------------------
+   Grid Container
+------------------------------------ */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+[class*="col-"] {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* ------------------------------------
+   12 Columns System
+------------------------------------ */
+
+@function col($count) {
+  @return ($count / 12) * 100%;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: col($i);
+  }
+}
+
+/* ------------------------------------
+   Responsive Breakpoints
+------------------------------------ */
+
+$breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1280px
+);
+
+@each $name, $size in $breakpoints {
+  @for $i from 1 through 12 {
+    .col-#{$name}-#{$i} {
+      @media (min-width: $size) {
+        width: col($i);
+      }
+    }
+  }
+}
+
+/* ------------------------------------
+   Alignment Utilities
+------------------------------------ */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* ------------------------------------
+   Gap Utilities
+------------------------------------ */
+
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-5 { gap: 1.25rem; }
+.gap-6 { gap: 1.5rem; }

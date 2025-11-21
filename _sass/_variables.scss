@@ -1,0 +1,71 @@
+@use "tokens";
+
+// 라이트 모드
+:root {
+  --primary-color: #{tokens.$primary-color-light};
+  --secondary-color: #{tokens.$secondary-color-light};
+  --white: #{tokens.$white};
+  --light-gray: #{tokens.$light-gray-light};
+  --lighten-gray: #{tokens.$lighten-gray-light};
+  --lightest-gray: #{tokens.$lightest-gray-light};
+  --light-blue: #{tokens.$light-blue-light};
+  --dark-gray: #{tokens.$dark-gray-light};
+  --blue-gray: #{tokens.$blue-gray-light};
+  --gray: #{tokens.$gray-light};
+  --dark-blue: #{tokens.$dark-blue-light};
+  --rgb-color: #{tokens.$rgb-color-light};
+  --background-rgba: rgba(var(--rgb-color), 0.95);
+  --background-color: var(--white);
+  --background-alt-color: var(--lighten-gray);
+  --background-alt-color-2: var(--lightest-gray);
+  --text-color: var(--dark-blue);
+  --text-alt-color: var(--blue-gray);
+  --heading-font-color: var(--dark-blue);
+  --link-color: var(--dark-blue);
+  --link-color-hover: var(--dark-blue);
+  --button-color: var(--white);
+  --gradient-color: linear-gradient(90deg, #f70077 0%, #{tokens.$primary-color-light} 100%);
+  --gradient-hover: linear-gradient(180deg, #f70077 0%, #{tokens.$primary-color-light} 160%);
+  --border-color: var(--light-gray);
+  --border-alt-color: var(--light-blue);
+  --th-color: var(--light-blue);
+  --tr-color: var(--light-gray);
+  --callout-note: #{tokens.$callout-note-light};
+  --callout-tip: #{tokens.$callout-tip-light};
+  --callout-important: #{tokens.$callout-important-light};
+  --callout-warning: #{tokens.$callout-warning-light};
+  --callout-caution: #{tokens.$callout-caution-light};
+  --syntax-highlighting-background: #{tokens.$syntax-bg-light};
+}
+
+// 다크 모드
+:root[dark] {
+  --primary-color: #{tokens.$primary-color-dark};
+  --white: #{tokens.$white};
+  --light-gray: #{tokens.$light-gray-dark};
+  --gray: #{tokens.$gray-dark};
+  --dark: #{tokens.$dark-dark};
+  --rgb-color: #{tokens.$rgb-color-dark};
+  --background-rgba: rgba(var(--rgb-color), 0.85);
+  --background-color: var(--dark);
+  --background-alt-color: #{tokens.$background-alt-dark};
+  --background-alt-color-2: #{tokens.$background-alt-2-dark};
+  --text-color: var(--gray);
+  --text-alt-color: var(--gray);
+  --heading-font-color: var(--light-gray);
+  --link-color: var(--light-gray);
+  --link-color-hover: var(--light-gray);
+  --button-color: var(--white);
+  --gradient-color: linear-gradient(90deg, #{tokens.$primary-color-dark} 0%, #8311c0 100%);
+  --gradient-hover: linear-gradient(180deg, #{tokens.$primary-color-dark} 0%, #8311c0 160%);
+  --border-color: #{tokens.$border-dark};
+  --border-alt-color: #{tokens.$border-dark};
+  --th-color: var(--background-alt-color);
+  --tr-color: var(--background-alt-color-2);
+  --callout-note: #{tokens.$callout-note-dark};
+  --callout-tip: #{tokens.$callout-tip-dark};
+  --callout-important: #{tokens.$callout-important-dark};
+  --callout-warning: #{tokens.$callout-warning-dark};
+  --callout-caution: #{tokens.$callout-caution-dark};
+  --syntax-highlighting-background: #{tokens.$syntax-bg-dark};
+}
