@@ -167,7 +167,7 @@ export default function ContactPage() {
                     transition={{delay: 0.8}}
                 >
                     <MapPin className="h-4 w-4"/>
-                    <span>Seoul, South Korea</span>
+                    <span>Daegu, South Korea</span>
                 </motion.div>
             </div>
         </div>
