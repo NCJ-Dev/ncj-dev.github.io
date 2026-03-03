@@ -57,7 +57,7 @@ const projects: Project[] = [
     },
     {
         key: "lg-ai-agent-material",
-        title: "AI Agent 자재관리 시스템 구축",
+        title: "LG AI Agent 자재관리 시스템 구축",
         description: "LG 자재관리 시스템에 AI Agent를 접목하고 대용량 데이터 ETL 파이프라인을 구축했습니다.",
         tags: ["Backend", "AI Integration", "ETL"],
         icon: Database,
