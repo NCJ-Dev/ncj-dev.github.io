@@ -6,10 +6,10 @@ import {Atom, Boxes, Braces, Cloud, Code2, Database, Server, Shield} from "lucid
 
 const skillsData = [
     // Core Backend
-    {name: "Java", icon: Braces, level: 82, color: "from-red-500 to-orange-500"},
-    {name: "Spring Boot", icon: Server, level: 85, color: "from-green-500 to-emerald-500"},
+    {name: "Java", icon: Braces, level: 83, color: "from-red-500 to-orange-500"},
+    {name: "Spring Boot", icon: Server, level: 84, color: "from-green-500 to-emerald-500"},
     {name: "Database", icon: Database, level: 83, color: "from-violet-500 to-purple-500"},
-    {name: "Batch", icon: Boxes, level: 85, color: "from-fuchsia-500 to-purple-500"},
+    {name: "Batch", icon: Boxes, level: 80, color: "from-fuchsia-500 to-purple-500"},
 
     // Supporting Skills
     {name: "JavaScript", icon: Code2, level: 75, color: "from-yellow-500 to-amber-500"},
