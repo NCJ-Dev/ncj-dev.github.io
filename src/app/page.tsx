@@ -32,31 +32,31 @@ export default function Home() {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-secondary/5 blur-[150px]"></div>
 
             <motion.div
-                className="absolute top-20 right-10 lg:right-20 hidden lg:block"
+                className="absolute top-20 right-8 2xl:right-20 hidden xl:block"
                 initial={{opacity: 0, x: 50}}
                 animate={{opacity: 1, x: 0}}
                 transition={{delay: 0.5, duration: 0.8}}
             >
-                <div className="glass-card rounded-2xl p-6 max-w-sm animate-float">
+                <div className="glass-card rounded-2xl p-6 w-[380px] 2xl:w-[420px] max-w-[calc(100vw-2rem)] overflow-hidden animate-float">
                     <div className="flex items-center gap-2 mb-4">
                         <div className="w-3 h-3 rounded-full bg-red-500"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div className="w-3 h-3 rounded-full bg-green-500"></div>
                         <span className="ml-2 text-xs text-muted-foreground font-mono">developer.js</span>
                     </div>
-                    <pre className="text-sm font-mono space-y-1">
+                    <div className="text-sm font-mono leading-6 overflow-x-hidden">
             {codeLines.map((line, i) => (
                 <motion.div
                     key={i}
                     initial={{opacity: 0, x: -20}}
                     animate={{opacity: 1, x: 0}}
                     transition={{delay: 1 + i * 0.15}}
-                    className={line.color}
+                    className={`${line.color} whitespace-pre`}
                 >
                     {line.text}
                 </motion.div>
             ))}
-          </pre>
+          </div>
                 </div>
             </motion.div>
 
@@ -66,7 +66,7 @@ export default function Home() {
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 0.5}}
-                    className="flex flex-col items-center max-w-5xl"
+                    className="flex w-full flex-col items-center max-w-5xl xl:pr-[360px] 2xl:pr-[420px]"
                 >
                     <motion.div
                         initial={{opacity: 0, y: 30}}
@@ -85,7 +85,7 @@ export default function Home() {
                         initial={{opacity: 0, y: 30}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.5, delay: 0.2}}
-                        className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
+                        className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-6 tracking-tight"
                     >
                         <span className="text-foreground">Hi, I'm </span>
                         <span className="text-gradient">남철진</span>
